@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var _origFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _origFetch;
+            },
+            set: function(val) {
+              _origFetch = val;
+            }
+          });
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <title>Blooms by Anya | Handmade Bouquets &amp; DIY Hampers</title>
+    <meta name="description" content="Handmade Bouquets &amp; DIY Hampers. Thoughtful gifts, beautifully created in Sialkot, Pakistan. Handcrafted floral arrangements, chocolate boxes, and bespoke celebrations." />
+    <meta property="og:title" content="Blooms by Anya | Handmade Bouquets &amp; DIY Hampers" />
+    <meta property="og:description" content="Handmade Bouquets &amp; DIY Hampers. Thoughtful gifts, beautifully created in Sialkot, Pakistan." />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#FBF8F1] text-[#303A2B] antialiased selection:bg-[#DDA9AC]/30 selection:text-[#303A2B]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
